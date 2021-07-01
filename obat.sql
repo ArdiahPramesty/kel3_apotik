@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 26 Jun 2021 pada 10.47
--- Versi server: 10.4.19-MariaDB
--- Versi PHP: 7.3.28
+-- Host: 127.0.0.1:3309
+-- Waktu pembuatan: 01 Jul 2021 pada 11.02
+-- Versi server: 10.4.16-MariaDB
+-- Versi PHP: 7.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,20 +18,22 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `apotek_ppbo`
+-- Database: `proyek_akhir_ppbo`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `obat`
+-- Struktur dari tabel `data_obat`
 --
 
-CREATE TABLE `obat` (
-  `kode_obat` varchar(100) NOT NULL,
-  `nama_obat` varchar(100) NOT NULL,
-  `jenis_obat` varchar(100) NOT NULL,
-  `harga_obat` varchar(100) NOT NULL
+CREATE TABLE `data_obat` (
+  `ID_obat` varchar(10) NOT NULL,
+  `Nama` varchar(30) NOT NULL,
+  `Jenis` varchar(30) NOT NULL,
+  `Stok` varchar(30) NOT NULL,
+  `Harga` varchar(30) NOT NULL,
+  `Tanggal_expired` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -39,12 +41,13 @@ CREATE TABLE `obat` (
 --
 
 --
--- Indeks untuk tabel `obat`
+-- Indeks untuk tabel `data_obat`
 --
-ALTER TABLE `obat`
-  ADD PRIMARY KEY (`kode_obat`);
+ALTER TABLE `data_obat`
+  ADD PRIMARY KEY (`ID_obat`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
