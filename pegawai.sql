@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 26 Jun 2021 pada 10.47
--- Versi server: 10.4.19-MariaDB
--- Versi PHP: 7.3.28
+-- Host: 127.0.0.1:3309
+-- Waktu pembuatan: 01 Jul 2021 pada 11.02
+-- Versi server: 10.4.16-MariaDB
+-- Versi PHP: 7.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,20 +18,23 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `apotek_ppbo`
+-- Database: `proyek_akhir_ppbo`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pegawai`
+-- Struktur dari tabel `data_karyawan`
 --
 
-CREATE TABLE `pegawai` (
-  `nip` varchar(100) NOT NULL,
-  `nama` varchar(100) NOT NULL,
-  `username` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL
+CREATE TABLE `data_karyawan` (
+  `NIK` varchar(10) NOT NULL,
+  `Nama` varchar(30) NOT NULL,
+  `Alamat` varchar(30) NOT NULL,
+  `Umur` varchar(30) NOT NULL,
+  `Jenis_kelamin` varchar(30) NOT NULL,
+  `Email` varchar(30) NOT NULL,
+  `No_HP` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -39,10 +42,10 @@ CREATE TABLE `pegawai` (
 --
 
 --
--- Indeks untuk tabel `pegawai`
+-- Indeks untuk tabel `data_karyawan`
 --
-ALTER TABLE `pegawai`
-  ADD PRIMARY KEY (`nip`);
+ALTER TABLE `data_karyawan`
+  ADD PRIMARY KEY (`NIK`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
